@@ -11,7 +11,7 @@ import Student_reviews from "@/src/sections/student_reviews";
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../public/img/logo.png";
-import Faqs from "../faqs/page";
+import Faqs from "@/src/sections/faqs";
 
 const About = async ({}) => {
   let subnavs = new Object(),

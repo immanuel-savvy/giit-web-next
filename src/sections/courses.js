@@ -17,7 +17,8 @@ class Courses extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    let { section } = this.props;
+    this.state = { courses: section.courses_ };
   }
 
   componentDidMount = async () => {
@@ -34,9 +35,9 @@ class Courses extends React.Component {
 
       courses.length < 6 &&
         courses.push(...courses.slice(0, 6 - courses.length));
-    } else courses = section.courses_;
 
-    this.setState({ courses });
+      this.setState({ courses });
+    }
 
     this.section_removed = (section_id) =>
       section_id === section._id && this.setState({ removed: true });
