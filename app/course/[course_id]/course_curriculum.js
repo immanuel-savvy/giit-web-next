@@ -104,7 +104,7 @@ class Course_curriculum extends React.Component {
             >
               {`Part ${String(index + 1).padStart(2, "0")}: ${topic}`}
 
-              {this.admin_logged ? (
+              {/* {this.admin_logged ? (
                 <span>
                   <a
                     onClick={() => this.remove_slide(index)}
@@ -120,7 +120,7 @@ class Course_curriculum extends React.Component {
                     <i className={`fas fa-edit`}></i>
                   </a>
                 </span>
-              ) : null}
+              ) : null} */}
             </a>
           </h6>
         </Accordion.Header>
@@ -192,7 +192,7 @@ class Course_curriculum extends React.Component {
               : "Course Circullum"}
           </h4>
 
-          {admin_logged && !show_form ? this.curriculum_btn() : null}
+          {/* {admin_logged && !show_form ? this.curriculum_btn() : null} */}
 
           {show_form ? (
             <Curriculum_form
