@@ -16,8 +16,8 @@ class Master_courses extends React.Component {
   constructor(props) {
     super(props);
 
-    let { master_courses } = this.props;
-    this.state = { master_courses };
+    // let { master_courses } = this.props;
+    this.state = {};
   }
 
   componentDidMount = async () => {
