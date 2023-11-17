@@ -88,7 +88,10 @@ class Master_courses extends React.Component {
             )}
           </div>
           {all ? null : (
-            <Explore_more_btn title="master courses" to={"/master_courses"} />
+            <Explore_more_btn
+              title="master courses"
+              to={"/all_master_courses"}
+            />
           )}
         </div>
       </section>
