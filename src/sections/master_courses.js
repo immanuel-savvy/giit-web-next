@@ -20,11 +20,11 @@ class Master_courses extends React.Component {
   }
 
   componentDidMount = async () => {
-    let { all } = this.props;
+    let { all, master_courses } = this.props;
 
-    let master_courses = await get_request(
-      `master_courses/${all ? "all" : "6"}`
-    );
+    master_courses =
+      master_courses ||
+      (await get_request(`master_courses/${all ? "all" : "6"}`));
 
     master_courses = master_courses.sort((m1, m2) => {
       let m1_index = master_course_alignment.findIndex((m) =>
