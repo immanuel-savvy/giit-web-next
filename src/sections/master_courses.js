@@ -97,4 +97,3 @@ class Master_courses extends React.Component {
 }
 
 export default Master_courses;
-export { master_course_alignment };
