@@ -143,7 +143,7 @@ class Footer extends React.Component {
                                           (master_course, index) => (
                                             <li key={index}>
                                               <Link
-                                                href="/course"
+                                                href={`/course/${master_course._id}`}
                                                 style={{
                                                   flexWrap: "wrap",
                                                   display: "flex",
@@ -186,7 +186,7 @@ class Footer extends React.Component {
                                             (master_course, index) => (
                                               <li key={index}>
                                                 <Link
-                                                  href="/course"
+                                                  href={`/course/${master_course._id}`}
                                                   style={{
                                                     flexWrap: "wrap",
                                                     display: "flex",

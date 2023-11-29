@@ -13,7 +13,7 @@ const Master_courses_ = async () => {
   return (
     <div id="main-wrapper">
       <Header page="master courses" />
-      <Breadcrumb page_title="Master_courses" page_text="Find Master_courses" />
+      <Breadcrumb page_title="Master courses" page_text="Find Master courses" />
 
       <Master_courses all master_courses={master_courses} />
 

@@ -8,7 +8,7 @@ class Course_review extends React.Component {
   constructor(props) {
     super(props);
 
-    let { likes, unlikes, hearts } = this.props.review;
+    let { likes, unlikes, hearts } = this.props?.review || {};
 
     this.state = {
       likes: likes || 0,
@@ -60,7 +60,7 @@ class Course_review extends React.Component {
   render = () => {
     let { likes, unlikes, hearts } = this.state;
     let { review } = this.props;
-    let { text, user, image, name, created, _id } = review;
+    let { text, user, image, name, created, _id } = review || {};
     if (user) {
       let { image: image_, firstname, lastname } = user;
       name = `${firstname} ${lastname}`.trim();

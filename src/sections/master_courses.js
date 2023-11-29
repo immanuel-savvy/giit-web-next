@@ -23,6 +23,8 @@ class Master_courses extends React.Component {
   componentDidMount = async () => {
     let { all, master_courses } = this.props;
 
+    this.setState({ slides_per_view: window.innerWidth < 650 ? 1 : 3 });
+
     master_courses =
       master_courses ||
       (await get_request(`master_courses/${all ? "all" : "6"}`));
@@ -45,7 +47,7 @@ class Master_courses extends React.Component {
 
   render() {
     let { gray, all } = this.props;
-    let { master_courses } = this.state;
+    let { master_courses, slides_per_view } = this.state;
     if (master_courses && !master_courses.length) return null;
 
     return (
@@ -69,7 +71,7 @@ class Master_courses extends React.Component {
               <Swiper
                 modules={[Autoplay, Pagination]}
                 pagination={{ clickable: true }}
-                slidesPerView={window.innerWidth < 650 ? 1 : 3}
+                slidesPerView={slides_per_view}
                 autoplay={{
                   delay: 2000,
                   pauseOnMouseEnter: true,

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import bg from "../../assets/css/img/breadcrumb_bg.jpg";
 
 class Breadcrumb extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class Breadcrumb extends React.Component {
           ...(page_title === "courses"
             ? new Object({ paddingTop: 30, paddingBottom: 20 })
             : null),
-          backgroundImage: `url(${require("../../assets/css/img/breadcrumb_bg.jpg")})`,
+          backgroundImage: `url(${bg.src})`,
           backgroundRepeat: "no-repeat",
           backgroundColor: "#ff9800",
         }}

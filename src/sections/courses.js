@@ -25,6 +25,8 @@ class Courses extends React.Component {
     let { section } = this.props,
       courses;
 
+    this.setState({ slides_per_view: window.innerWidth < 650 ? 1 : 3 });
+
     if (!section.courses_?.length) {
       let arr = shuffle_array(section.courses.filter((c) => c));
       courses = arr.slice(0, 6);
@@ -52,7 +54,7 @@ class Courses extends React.Component {
   render() {
     let { section, gray } = this.props;
     let { title, text, _id } = section;
-    let { courses, removed } = this.state;
+    let { courses, removed, slides_per_view } = this.state;
     if ((courses && !courses.length) || removed) return null;
 
     return (
@@ -67,7 +69,7 @@ class Courses extends React.Component {
             </div>
           </div>
           <div className="row justify-content-center">
-            {courses && courses.length ? (
+            {courses?.length ? (
               <Swiper
                 modules={[Autoplay, Pagination]}
                 pagination={{ clickable: true }}

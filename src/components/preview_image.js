@@ -9,8 +9,14 @@ class Preview_image extends React.Component {
     super(props);
 
     let { height, width } = this.props;
-    this.state = { height, width: width || this.default_width() };
+    this.state = { height, width: 200 };
   }
+
+  componentDidMount = () => {
+    let { width } = this.props;
+
+    this.setState({ width: width || this.default_width() });
+  };
 
   default_width = () => {
     let { parent_size, responsive } = this.props;
