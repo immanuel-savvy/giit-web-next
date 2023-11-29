@@ -73,7 +73,7 @@ class Courses extends React.Component {
               <Swiper
                 modules={[Autoplay, Pagination]}
                 pagination={{ clickable: true }}
-                slidesPerView={window.innerWidth < 650 ? 1 : 3}
+                slidesPerView={slides_per_view}
                 autoplay={{
                   delay: 2000,
                   pauseOnMouseEnter: true,
