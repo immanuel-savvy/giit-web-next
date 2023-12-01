@@ -79,7 +79,7 @@ class Best_instructors extends React.Component {
         <div className="row justify-content-center mt-5">
           {instructors ? (
             instructors && !instructors.length ? null : (
-              instructors.map((instructor, index) => (
+              instructors?.map((instructor, index) => (
                 <Instructor testimonials instructor={instructor} key={index} />
               ))
             )
