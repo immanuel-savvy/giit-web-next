@@ -4,6 +4,8 @@ import Loadindicator from "@/src/components/loadindicator";
 import { post_request } from "@/src/utils/services";
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import bg from "../../assets/img/loginbg4.jpg";
 
 class Signup_section extends React.Component {
   constructor(props) {
@@ -72,11 +74,7 @@ class Signup_section extends React.Component {
               <form>
                 <div className="crs_log_wrap">
                   <div className="crs_log__thumb">
-                    <img
-                      src="../Assets/img/loginbg4.jpg"
-                      className="img-fluid"
-                      alt=""
-                    />
+                    <Image src={bg} className="img-fluid" alt="" />
                   </div>
                   <div className="crs_log__caption">
                     <div className="rcs_log_123">

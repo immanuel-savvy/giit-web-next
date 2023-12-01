@@ -2,6 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
+import bg from "../../assets/img/forgot_pass_bg2.jpg";
+import Image from "next/image";
 
 class Forgot_password_section extends React.Component {
   constructor(props) {
@@ -19,11 +21,7 @@ class Forgot_password_section extends React.Component {
               <form>
                 <div className="crs_log_wrap">
                   <div className="crs_log__thumb">
-                    <img
-                      src="../Assets/img/forgot_pass_bg2.jpg"
-                      className="img-fluid"
-                      alt=""
-                    />
+                    <Image src={bg} className="img-fluid" alt="" />
                   </div>
                   <div className="crs_log__caption">
                     <div className="rcs_log_123">
@@ -58,7 +56,7 @@ class Forgot_password_section extends React.Component {
                     <div className="fhg_45">
                       <p className="musrt">
                         Don't have account?{" "}
-                        <Link to="/signup" className="theme-cl">
+                        <Link href="/signup" className="theme-cl">
                           SignUp
                         </Link>
                       </p>

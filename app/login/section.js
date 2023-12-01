@@ -3,6 +3,8 @@
 import Loadindicator from "@/src/components/loadindicator";
 import React from "react";
 import Link from "next/link";
+import bg from "../../assets/img/loginbg4.jpg";
+import Image from "next/image";
 
 class Login_section extends React.Component {
   constructor(props) {
@@ -37,11 +39,7 @@ class Login_section extends React.Component {
               <form>
                 <div className="crs_log_wrap">
                   <div className="crs_log__thumb">
-                    <img
-                      src="../Assets/img/loginbg4.jpg"
-                      className="img-fluid"
-                      alt=""
-                    />
+                    <Image src={bg} className="img-fluid" alt="" />
                   </div>
                   <div className="crs_log__caption">
                     <div className="rcs_log_123">
