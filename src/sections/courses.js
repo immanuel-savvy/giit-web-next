@@ -18,7 +18,7 @@ class Courses extends React.Component {
     super(props);
 
     let { section } = this.props;
-    this.state = { courses: section.courses_ };
+    this.state = { courses: section.courses_, show: null };
   }
 
   componentDidMount = async () => {
@@ -45,6 +45,8 @@ class Courses extends React.Component {
       section_id === section._id && this.setState({ removed: true });
 
     emitter.emit("section_removed", this.section_removed);
+
+    this.setState({ show: true });
   };
 
   componentWillUnmount = () => {
@@ -54,7 +56,9 @@ class Courses extends React.Component {
   render() {
     let { section, gray } = this.props;
     let { title, text, _id } = section;
-    let { courses, removed, slides_per_view } = this.state;
+    let { courses, removed, show } = this.state;
+    if (!show) return;
+
     if ((courses && !courses.length) || removed) return null;
 
     return (

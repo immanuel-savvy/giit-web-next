@@ -55,22 +55,26 @@ class Custom_nav extends React.Component {
   componentDidMount = () => {
     window.onscroll = (e) => {
       if (window.scrollY > 200) {
-        document.querySelector(".header")?.classList?.add("header-fixed");
+        if (document.querySelector(".header"))
+          document.querySelector(".header").classList.add("header-fixed");
         document.getElementById("top_info").style.display = "none";
       } else {
-        document.querySelector(".header")?.classList?.remove("header-fixed");
+        if (document.querySelector(".header"))
+          document.querySelector(".header").classList?.remove("header-fixed");
         document.getElementById("top_info").style.display = "block";
       }
 
       if (window.scrollY >= 200) {
-        document
-          .querySelector(".header")
-          ?.classList?.add("header-fixed my_header_style");
+        if (document.querySelector(".header"))
+          document
+            .querySelector(".header")
+            .classList.add("header-fixed my_header_style");
         document.getElementById("top_info").style.display = "none";
       } else {
-        document
-          .querySelector(".header")
-          ?.classList?.remove("header-fixed my_header_style");
+        if (document.querySelector(".header"))
+          document
+            .querySelector(".header")
+            .classList.remove("header-fixed my_header_style");
         document.getElementById("top_info").style.display = "block";
       }
     };
