@@ -40,7 +40,7 @@ const About = async ({}) => {
               <div className="lmp_caption">
                 <span className="theme-cl">About Us</span>
                 <h2 className="mb-3">What We Do & Our Aim</h2>
-                {about_statement.text.split("\n").map((text, index) => (
+                {about_statement?.text.split("\n").map((text, index) => (
                   <p key={index}>{text}</p>
                 ))}
                 <br />
