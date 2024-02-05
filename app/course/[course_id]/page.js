@@ -24,9 +24,9 @@ const Course = async ({ params }) => {
   let { course_id } = params;
 
   let course = await get_request(
-      `${course_id.startsWith("master") ? "master_course" : "course"}/${
-        params.course_id
-      }`
+      `${
+        course_id.startsWith("master") ? "master_course" : "course"
+      }/${course_id}`
     ),
     courses;
 
