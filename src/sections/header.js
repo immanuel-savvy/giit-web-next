@@ -11,7 +11,9 @@ class Header extends React.Component {
     this.state = {};
   }
 
-  componentDidMount = () => {};
+  componentDidMount = () => {
+    console.log("lola is grey!");
+  };
 
   render() {
     let { page, lock } = this.props;
