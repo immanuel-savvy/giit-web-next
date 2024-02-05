@@ -7,13 +7,13 @@ const SKILL_LEVEL = new Array(
 
 const DEV = false;
 
-const hostname = DEV ? "http://localhost" : "http://giitafrica.com";
+const hostname = DEV ? "http://localhost" : "https://giitafrica.com";
 
 const client_domain = DEV ? `${hostname}:1408` : `${hostname}`;
 
 const COST_SPREAD = new Array("all", "free", "paid");
 
-const domain = DEV ? `${hostname}:3300` : `http://giitafrica.com`;
+const domain = DEV ? `${hostname}:3300` : `https://giitafrica.com`;
 
 const default_admin = "adminstrators~123giitafrica~1234567890123";
 
