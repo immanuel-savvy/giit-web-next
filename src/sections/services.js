@@ -30,7 +30,7 @@ class Services extends React.Component {
             </div>
           </div>
           <div className="row justify-content-center">
-            {services && services.map ? (
+            {services && typeof services.map === "function" ? (
               services.map((service, index) => (
                 <Service service={service} key={index} />
               ))

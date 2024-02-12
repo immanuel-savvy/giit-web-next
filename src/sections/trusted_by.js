@@ -29,7 +29,7 @@ class Trusted_by extends React.Component {
             </div>
           </div>
           <div className="row justify-content-center">
-            {trustees ? (
+            {trustees?.map ? (
               trustees.map((trustee) => (
                 <Trustee key={trustee._id} trustee={trustee} />
               ))
